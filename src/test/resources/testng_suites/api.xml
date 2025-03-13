@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Iza J's API tests" verbose="3" parallel="methods" thread-count="10">
+
+    <test name="GitHub REST API tests">
+        <classes>
+            <class name="com.solvd.carinatesting.GithubAPITest"></class>
+        </classes>
+    </test>
+
+</suite>

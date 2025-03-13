@@ -1,0 +1,4 @@
+{
+  "name": "${language_name}",
+  "source": "regex:.*"
+}
