@@ -11,8 +11,8 @@
     <properties>
         <carina-api.v>1.2.4</carina-api.v>
         <carina-core.v>1.3.0</carina-core.v>
-        <freemarker.v>2.3.34</freemarker.v>
         <surefire.v>3.5.2</surefire.v>
+        <surefire.suite>api.xml</surefire.suite>
     </properties>
 
     <dependencies>
@@ -26,15 +26,20 @@
             <artifactId>carina-core</artifactId>
             <version>${carina-core.v}</version>
         </dependency>
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>${freemarker.v}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>${surefire.v}</version>
-        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.v}</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng_suites/${surefire.suite}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
