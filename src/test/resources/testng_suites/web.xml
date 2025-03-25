@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Iza J's web tests" verbose="3" parallel="methods" thread-count="10">
+
+    <test name="Amazon website tests">
+        <classes>
+            <class name="com.solvd.carinatesting.AmazonWebTest"></class>
+        </classes>
+    </test>
+
+</suite>
