@@ -1,5 +1,6 @@
 package com.solvd.carinatesting.gui.pages.ios;
 
+import com.solvd.carinatesting.gui.components.NavigationToolBar;
 import com.solvd.carinatesting.gui.components.SearchBar;
 import com.solvd.carinatesting.gui.pages.common.HomePageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
@@ -11,6 +12,9 @@ public class HomePage extends HomePageBase {
     // @FindBy()
     private SearchBar searchBar;
 
+    // @FindBy()
+    private NavigationToolBar navigationToolBar;
+
     public HomePage(WebDriver driver) {
         super(driver);
         // (...)
@@ -19,5 +23,10 @@ public class HomePage extends HomePageBase {
     @Override
     public SearchBar getSearchBar() {
         return searchBar;
+    }
+
+    @Override
+    public NavigationToolBar getNavigationToolBar() {
+        return navigationToolBar;
     }
 }

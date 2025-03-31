@@ -10,25 +10,25 @@ import org.testng.annotations.Test;
 
 public class GithubAPITest implements IAbstractTest {
 
-    @Test(description = "List all the emojis available to use on GitHub.", enabled = true)
+    @Test(description = "List all the emojis available to use on GitHub.")
     @MethodOwner(owner = "iza-j")
-    public void testGetEmojis() {
+    public void getEmojisTest() {
         GetEmojis method = new GetEmojis();
         method.callAPIExpectSuccess();
         method.validateResponseAgainstSchema("api/emojis/rs.schema");
     }
 
-    @Test(description = "Get the content of a gitignore template.", enabled = true)
+    @Test(description = "Get the content of a gitignore template.")
     @MethodOwner(owner = "iza-j")
-    public void testGetGitIgnoreTemplate() {
+    public void getGitIgnoreTemplateTest() {
         GetGitIgnoreTemplate method = new GetGitIgnoreTemplate("Java");
         method.callAPIExpectSuccess();
         method.validateResponse(JSONCompareMode.STRICT);
     }
 
-    @Test(description = "Create a comment for a commit.", enabled = true)
+    @Test(description = "Create a comment for a commit.")
     @MethodOwner(owner = "iza-j")
-    public void testPostCommitComment() {
+    public void postCommitCommentTest() {
         PostCommitComment method = new PostCommitComment("iza-j", "carina-testing", "a87c735058883da708549a0d78d9529f9e9b83e1", "...");
         method.callAPIExpectSuccess();
         method.validateResponse(JSONCompareMode.STRICT);

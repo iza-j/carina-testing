@@ -30,7 +30,6 @@ public class SearchBar extends AbstractUIObject {
     }
 
     public String selectCategory(String wantedCategory) {
-//        searchDropdownOptions.forEach(i -> System.out.println(i.getText()));
         searchDropdown.click();
         for (ExtendedWebElement option : searchDropdownOptions) {
             if (option.getText().equalsIgnoreCase(wantedCategory)) {

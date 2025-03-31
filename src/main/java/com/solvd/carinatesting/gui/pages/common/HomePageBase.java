@@ -1,5 +1,6 @@
 package com.solvd.carinatesting.gui.pages.common;
 
+import com.solvd.carinatesting.gui.components.NavigationToolBar;
 import com.solvd.carinatesting.gui.components.SearchBar;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
@@ -11,4 +12,6 @@ public abstract class HomePageBase extends AbstractPage {
     }
 
     public abstract SearchBar getSearchBar();
+
+    public abstract NavigationToolBar getNavigationToolBar();
 }

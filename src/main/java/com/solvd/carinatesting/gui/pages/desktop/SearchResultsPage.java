@@ -17,14 +17,14 @@ public class SearchResultsPage extends SearchResultsPageBase {
     @FindBy(id = "nav-search-bar-form")
     private SearchBar searchBar;
 
-    @FindBy(xpath = "//div[contains(@class, 'result-list') and contains(@class, 'search-results')]")
+    @FindBy(xpath = "//div [contains (@class, 'result-list') and contains (@class, 'search-results')]")
     private ExtendedWebElement searchResultsContainer;
 
     @Context(dependsOn = "searchResultsContainer")
-    @FindBy(xpath = ".//div[@role='listitem' and contains(@class, 'result-item')]")
+    @FindBy(xpath = "div [@role = 'listitem' and contains (@class, 'result-item')]")
     private List<ExtendedWebElement> searchResultList;
 
-    @FindBy(xpath = ".//select[contains(@id, 's-result-sort-select')]/option")
+    @FindBy(xpath = "//select [contains (@id, 's-result-sort-select')] / option")
     private List<ExtendedWebElement> sortByOptions;
 
     public SearchResultsPage(WebDriver driver) {
